@@ -1,10 +1,10 @@
 ## Overview
 ![MS-HR SegFormer](./images/Fig1.jpg "模型结构图")
 
- MS-HR SegFormer a generic Transformer-based semantic segmentation framework, termed HR-MM SegFormer (Fig.1), which integrates HR optical remote sensing data and multimodal (multi-source) data. The framework employs a unified Vision Transformer to extract multi-scale features from both HR and MM data and performs cross-attention fusion to fully exploit the complementary and discriminative characteristics of the same geographic scene, thereby addressing the limitations of single-source remote sensing image semantic segmentation.    
+MM-HR SegFormer a generic Transformer-based semantic segmentation framework, termed HR-MM SegFormer (Fig.1), which integrates HR optical remote sensing data and multimodal (multi-source) data. The framework employs a unified Vision Transformer to extract multi-scale features from both HR and MM data and performs cross-attention fusion to fully exploit the complementary and discriminative characteristics of the same geographic scene, thereby addressing the limitations of single-source remote sensing image semantic segmentation.    
 
 ## Dataset
-[talimu-Multispectral datasets](https://drive.google.com/drive/folders/19kzW_Ray2gQy9Q6M6UZvkb4Rwxoeymdt?usp=drive_link)
+[Talimu-Multispectral datasets](https://drive.google.com/drive/folders/19kzW_Ray2gQy9Q6M6UZvkb4Rwxoeymdt?usp=drive_link)
 ![MS-HR SegFormer](./images/Fig8.jpg "模型结构图")
 
 [Postdam-DSM datasets](https://drive.google.com/drive/folders/1yy-sMVo48hoezj-PMYYz2dyzjnyV5oao?usp=drive_link) and [Vinmate-DSM datasets](https://drive.google.com/drive/folders/1JIdKtDLNHcCOpMfIgDq3rX31KB_0J3Bv?usp=drive_link)
