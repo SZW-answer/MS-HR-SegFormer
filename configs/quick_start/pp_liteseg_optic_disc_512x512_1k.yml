@@ -1,0 +1,51 @@
+batch_size: 256
+iters: 200000
+
+train_dataset:
+  type: Dataset
+  dataset_root: dataset
+  train_path: dataset/train.txt
+  num_classes: 5
+  mode: train
+  transforms:
+    # - type: ResizeStepScaling
+    #   min_scale_factor: 0.5
+    #   max_scale_factor: 2.0
+    #   scale_step_size: 0.25
+    # - type: RandomPaddingCrop
+    #   crop_size: [256, 256]
+    - type: RandomHorizontalFlip
+    - type: Normalize
+
+val_dataset:
+  type: Dataset
+  dataset_root: dataset
+  val_path: dataset/val.txt
+  num_classes: 5
+  mode: val
+  transforms:
+    - type: Normalize
+
+optimizer:
+  type: SGD
+  momentum: 0.9
+  weight_decay: 4.0e-5
+
+lr_scheduler:
+  type: PolynomialDecay
+  learning_rate: 0.01
+  end_lr: 0
+  power: 0.9
+
+loss:
+  types:
+    - type: CrossEntropyLoss
+      # weight: [0.0162295,0.24774522,0.35169965,0.01744425,0.01651262,0.13216693,0.14744214,0.07075969]
+  coef: [1, 1, 1]
+
+
+model:
+  type: PPLiteSeg
+  backbone:
+    type: STDC2
+    pretrained: 
